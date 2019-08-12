@@ -95,6 +95,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
 
+# Recorder app
+PRODUCT_PACKAGES += \
+    Recorder
+
+# Some more permissions
+PRODUCT_COPY_FILES += \
+    vendor/cos/prebuilt/common/etc/permissions/privapp-permissions-recorder.xml:system/etc/permissions/privapp-permissions-recorder.xml \
+    vendor/cos/prebuilt/common/etc/permissions/org.pixelexperience.recorder.xml:system/etc/permissions/org.pixelexperience.recorder.xml
+
 # Power whitelist
 PRODUCT_COPY_FILES += \
     vendor/cos/config/permissions/custom-power-whitelist.xml:system/etc/sysconfig/custom-power-whitelist.xml
@@ -109,17 +118,11 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
 # Optional packages
 PRODUCT_PACKAGES += \
-    Calendar \
-    Camera2 \
     Contacts \
     DeskClock \
     Dialer \
     ExactCalculator \
-    Gallery2 \
-    LatinIME \
-    messaging \
-    Recorder \
-    RetroMusicPlayer \
+    Dirac \
     LiveWallpapersPicker
 
 # Cosmic-OS Packages
