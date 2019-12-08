@@ -109,22 +109,17 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
 # Optional packages
 PRODUCT_PACKAGES += \
-    Calendar \
-    Camera2 \
-    Contacts \
-    DeskClock \
     Dialer \
-    ExactCalculator \
-    Gallery2 \
-    LatinIME \
-    messaging \
     Recorder \
-    RetroMusicPlayer \
     LiveWallpapersPicker
+
+# Some more permissions
+PRODUCT_COPY_FILES += \
+    vendor/cos/prebuilt/common/etc/permissions/privapp-permissions-recorder.xml:system/etc/permissions/privapp-permissions-recorder.xml \
+    vendor/cos/prebuilt/common/etc/permissions/org.pixelexperience.recorder.xml:system/etc/permissions/org.pixelexperience.recorder.xml
 
 # Cosmic-OS Packages
 PRODUCT_PACKAGES += \
-    CosmicWalls \
     Galaxy
 
 # Font package
